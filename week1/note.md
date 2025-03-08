@@ -104,7 +104,7 @@ public static void main(String[] args) {
 - We should not worry much about how ``System``, ``out`` and ``println()`` works. We just should know that we need them together to print the stuff to the screen.
 - We should note that each code statement must end with a semicolon (;).
 
-### Exercises
+### Java Syntax Exercises
 #### A file containing a class called MyClass should be saved as:
 ![q1.png](w3school_screenshot/syntax_exercise/q1.png)
 ![q1_correct.png](w3school_screenshot/syntax_exercise/q1_correct.png)
@@ -144,6 +144,17 @@ System.out.println("Hello World"); // This is a comment.
  */
 System.out.println("Hello World");
 ```
+### Java Comment Exercises
+#### What is the meaning of comments in Java?
+![q1.png](w3school_screenshot/comment_exercise/q1.png)
+![q1_correct.png](w3school_screenshot/comment_exercise/q1_correct.png)
+#### Comments in Java are written with special characters. Insert the missing parts:
+![q2.png](w3school_screenshot/comment_exercise/q2.png)
+![q2_correct.png](w3school_screenshot/comment_exercise/q2_correct.png)
+#### When do we usually use multi-line comments?
+![q3.png](w3school_screenshot/comment_exercise/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3school_screenshot/comment_exercise/exercise_completed.png)
 
 ## Java Output/Print
 
@@ -163,3 +174,30 @@ System.out.println("It is awesome!");
 
 ### Double quotes
 - Text must be wrapped inside double quotations marks ``""``.
+```java
+System.out.println("This sentence will work!");
+```
+- While this will result in error:
+```java
+System.out.println(This sentence will produce an error);
+```
+
+### The ``Print()`` Method
+- There is also a ``print()`` method, which is similar to ``println()``.
+- The only difference is that it does not insert a new line at the end of the output:
+```java
+System.out.print("Hello World!");
+System.out.print("I will print on the same line.");
+```
+
+### Java Output/Print Exercise
+#### Which method is often used to print text in Java?
+![q1.png](w3school_screenshot/output_print_exercise/q1.png)
+![q1_correct.png](w3school_screenshot/output_print_exercise/q1_correct.png)
+#### Text inside println() must be wrapped inside double quotes.
+![q2.png](w3school_screenshot/output_print_exercise/q2.png)
+![q2_correct.png](w3school_screenshot/output_print_exercise/q2_correct.png)
+#### The difference between println() and print() is that:
+![q3.png](w3school_screenshot/output_print_exercise/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3school_screenshot/output_print_exercise/exercise_completed.png)
