@@ -223,6 +223,10 @@ System.out.println(5 + 3);
 ```java
 System.out.println(2 * 5);
 ```
+#### Code in Local Machine
+![code.png](w3school_screenshot/java_output_exercise/code_and_run/code.png)
+#### After Compiling and Running
+![compiled_and_run.png](w3school_screenshot/java_output_exercise/code_and_run/compiled_and_run.png)
 
 ### Java Output Numbers Exercise
 #### What is the output of the following code? ``System.out.println(3 + 3);``
