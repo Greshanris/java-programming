@@ -240,3 +240,112 @@ System.out.println(2 * 5);
 #### Exercise Completed
 ![Exercise_completed.png](w3school_screenshot/java_output_exercise/Exercise_completed.png)
 
+## Java Variables
+### Introduction
+Variables are the containers that store the values which can be string, number, or booleans.
+But, if we try to find out the **types** of variables, then it will be as follows:
+- ``String`` which stores text which is anything inside ``""``.
+- ``int`` which stores integers ( whole numbers ) which is without decimals. For instance, ``1``, ``345``.
+- ``float`` which is just a decimal number ``2.4``
+- ``char`` which stores single characters such as ``a`` or ``B``. Char values are surrounded by single quotes. So, earlier a will be 'a' or B will be 'B'. This is how it is stored.
+- ``boolean`` which stores values with two states: ``true`` or ``false``.
+
+### Declaring Variables
+So, to create a variable, we must specify the type and assign it a value:
+
+_Syntax_
+```
+type variableName = value;
+```
+### String type Variable
+so, to create a variableName ``Name`` with value ``Rishav`` which is dataType ``String``:
+```java
+String name = "Rishav";
+// To display the value
+System.out.println(name);
+```
+#### Code in Local Machine
+![code.png](w3school_screenshot/java_variables/code_compile_and_run/code.png)
+#### Compiling and Running the Code
+![compiling_and_running.png](w3school_screenshot/java_variables/code_compile_and_run/compiling_and_running.png)
+
+### int type Variable
+Here, we are creating a variable called ``rishavNum`` of type ``int`` and assigning it the value ``5``
+```java
+int rishavNum = 5;
+System.out.println(rishavNum);
+```
+#### Code in Local Machine
+![code2.png](w3school_screenshot/java_variables/code_compile_and_run/code2.png)
+#### Compiling and Running the Code
+![compiling_and_running2.png](w3school_screenshot/java_variables/code_compile_and_run/compiling_and_running2.png)
+
+### Declaring Variable first and assigning value later
+```java
+int rishavNum;
+rishavNum = 3;
+System.out.println(rishavNum);
+```
+#### Code in Local Machine
+![code3.png](w3school_screenshot/java_variables/code_compile_and_run/code3.png)
+#### Compiling and Running the Code
+![compiling_and_running3.png](w3school_screenshot/java_variables/code_compile_and_run/compiling_and_running3.png)
+
+### Assigning new value to an existing variable overwriting the previous value
+```java
+// assiging 23 number
+int rishavNum = 23;
+rishavNum = 5; // now, rishavNum is 5
+// displaying
+System.out.println(rishavNum);
+```
+#### Code in Local Machine
+![code4.png](w3school_screenshot/java_variables/code_compile_and_run/code4.png)
+#### Compiling and Running the Code
+![compiling_and_running4.png](w3school_screenshot/java_variables/code_compile_and_run/compiling_and_running4.png)
+
+### Final Variables
+typing ``final`` keyword before the datatype such as ``int`` or ``String`` while declaring variables will make variable unchangeable and read-only
+```java
+final int rishavNum = 23; // to not overwrite the value
+rishavNum = 3;
+System.out.println(rishavNum);
+```
+#### Code in Local Machine
+![code5.png](w3school_screenshot/java_variables/code_compile_and_run/code5.png)
+#### Compiling and Running the Code (error encounter because we can't assign new value to variable declared with ``final`)
+![compiling_and_running5.png](w3school_screenshot/java_variables/code_compile_and_run/compiling_and_running5.png)
+
+### Other types
+So, upto now, we only declared variable of ``int`` and ``String`` type. Here, we will declare another types as well:
+```java
+// declaring integer type
+int rishavNum = 23;
+//  declaring float type
+float rishavFloatNum = 8.65f; // using "f" to indicate a float literal
+// declaring boolean type
+boolean rishavBool = true;
+// declaring string type
+String rishavText = "Rishav";
+
+// Then, printing all
+System.out.println("rishavNum = " + rishavNum);
+System.out.println("rishavFloatNum = " + rishavFloatNum);
+System.out.println("rishavBool = " + rishavBool);
+System.out.println("rishavText = " + rishavText);
+```
+#### Code in Local Machine
+![code6.png](w3school_screenshot/java_variables/code_compile_and_run/code6.png)
+#### Compiling and Running the Code
+![compiling_and_running6.png](w3school_screenshot/java_variables/code_compile_and_run/compiling_and_running6.png)
+
+### Java Variables Exercise
+#### True or False: To create a variable in Java, you must specify the type first.
+![q1.png](w3school_screenshot/java_variables/q1.png)
+![q1_correct.png](w3school_screenshot/java_variables/q1_correct.png)
+#### Create a variable named "carName" with value as "Volvo"
+![q2.png](w3school_screenshot/java_variables/q2.png)
+![q2_correct.png](w3school_screenshot/java_variables/q2_correct.png)
+#### Create a variable named maxSpeed and assign the value 120 to it.
+![q3.png](w3school_screenshot/java_variables/q3.png)
+![Exercise_completed.png](w3school_screenshot/java_variables/Exercise_completed.png)
