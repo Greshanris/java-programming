@@ -401,3 +401,19 @@ System.out.println(x + y); // printing the value of x + y
 #### Exercise Completed
 ![Exercise_finished.png](w3school_screenshot/java_print_variable/Exercise_finished.png)
 
+## Java Declare Multiple Variables
+### Declare Many variables
+So, to declare more than one variable having ``Same Type``, we can use comma-separated list:
+```java
+/*
+int x = 5;
+int y = 6;
+int z = 50; and below code is same
+ */
+int x = 3, y = 5, z = 23;
+System.out.println(x + y + z);
+```
+#### Code in Local Machine
+![code1.png](w3school_screenshot/java_declare_variable/code_compile_and_run/code1.png)
+#### Compiling and Running the Code
+![compile_and_run1.png](w3school_screenshot/java_declare_variable/code_compile_and_run/compile_and_run1.png)
