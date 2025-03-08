@@ -39,6 +39,7 @@ public class Main {
     }
 }
 ```
+![hello_world_code.png](w3school_screenshot/hello_world_code.png)
 
 - Then, we saved the file, and navigated to the directory and compiled the code:
 ```commandline
@@ -171,6 +172,9 @@ System.out.println("Hello World!");
 System.out.println("I am learning Java.");
 System.out.println("It is awesome!");
 ```
+![code.png](w3school_screenshot/output_print_exercise/run_code/code.png)
+#### After compiling the code and running it:
+![compiling_and_running.png](w3school_screenshot/output_print_exercise/run_code/compiling_and_running.png)
 
 ### Double quotes
 - Text must be wrapped inside double quotations marks ``""``.
@@ -201,3 +205,34 @@ System.out.print("I will print on the same line.");
 ![q3.png](w3school_screenshot/output_print_exercise/q3.png)
 #### Exercise Completed
 ![exercise_completed.png](w3school_screenshot/output_print_exercise/exercise_completed.png)
+
+## Java Output Numbers
+### Print Numbers
+We can also use the ``println()`` method to print the numbers.
+```java
+System.out.println(3);
+System.out.println(38);
+System.out.println(49003);
+```
+
+We can also perform mathematical calculations inside the ``println()`` method:
+```java
+System.out.println(5 + 3);
+```
+
+```java
+System.out.println(2 * 5);
+```
+
+### Java Output Numbers Exercise
+#### What is the output of the following code? ``System.out.println(3 + 3);``
+![q1.png](w3school_screenshot/java_output_exercise/q1.png)
+![q1_correct.png](w3school_screenshot/java_output_exercise/q1_correct.png)
+#### Numbers inside println() must be wrapped inside double quotes. True or False
+![q2.png](w3school_screenshot/java_output_exercise/q2.png)
+![q2_correct.png](w3school_screenshot/java_output_exercise/q2_correct.png)
+#### What is the output of the following code? ``System.out.println(2 * 5);``
+![q3.png](w3school_screenshot/java_output_exercise/q3.png)
+#### Exercise Completed
+![Exercise_completed.png](w3school_screenshot/java_output_exercise/Exercise_completed.png)
+
