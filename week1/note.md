@@ -349,3 +349,55 @@ System.out.println("rishavText = " + rishavText);
 #### Create a variable named maxSpeed and assign the value 120 to it.
 ![q3.png](w3school_screenshot/java_variables/q3.png)
 ![Exercise_completed.png](w3school_screenshot/java_variables/Exercise_completed.png)
+
+## Java Variables - Print Variables
+### Display Variables
+The ``println()`` method is used to display variables
+And, if we combine both text and a variable using ``+`` character, then
+```java
+String name = "Rishav";
+System.out.println("My name is " + name); // using + character to combine text and a variable
+```
+#### Code in Local Machine
+![code1.png](w3school_screenshot/java_print_variable/code_compile_and_run/code1.png)
+#### Compiling and Running the Code
+![compile_and_run1.png](w3school_screenshot/java_print_variable/code_compile_and_run/compile_and_run1.png)
+
+### Using ``+`` character to add a variable to another variable:
+```java
+String firstName = "Rishav";
+String lastName = "Chaudhary";
+String fullName = firstName + lastName;
+System.out.println(fullName);
+```
+#### Code in Local Machine
+![code2.png](w3school_screenshot/java_print_variable/code_compile_and_run/code2.png)
+#### Compiling and Running the Code
+![compile_and_run2.png](w3school_screenshot/java_print_variable/code_compile_and_run/compile_and_run2.png)
+
+### For numeric values, the ``+`` character works as a mathematical operator:
+```java
+int x = 5;
+int y = 3;
+System.out.println(x + y); // printing the value of x + y
+```
+#### Code in Local Machine
+![code3.png](w3school_screenshot/java_print_variable/code_compile_and_run/code3.png)
+#### Compiling and Running the Code
+![compile_and_run3.png](w3school_screenshot/java_print_variable/code_compile_and_run/compile_and_run3.png)
+
+### Java Print Variables Exercise
+#### Which method is often used to print variables?
+![q1.png](w3school_screenshot/java_print_variable/q1.png)
+![q1_correct.png](w3school_screenshot/java_print_variable/q1_correct.png)
+#### Insert the missing parts to combine both text and a variable.
+![q2.png](w3school_screenshot/java_print_variable/q2.png)
+![q2_correct.png](w3school_screenshot/java_print_variable/q2_correct.png)
+#### Display the sum of 5 + 10, using two variables: x and y.
+![q3.png](w3school_screenshot/java_print_variable/q3.png)
+![q3_correct.png](w3school_screenshot/java_print_variable/q3_correct.png)
+#### Create a variable called z, assign x + y to it, and display the result.
+![q4.png](w3school_screenshot/java_print_variable/q4.png)
+#### Exercise Completed
+![Exercise_finished.png](w3school_screenshot/java_print_variable/Exercise_finished.png)
+
