@@ -667,3 +667,118 @@ System.out.println(hadLearnt);
 #### Exercise Completed
 ![Exercise_completed.png](w3school_screenshot/java_boolean/Exercise_completed.png)
 
+## Java Characters
+### Characters
+The ``char`` data type is used to store a **single** character. The character must be surrounded by single quotes, like 'A' or 'c':
+```java
+char myGrade = 'B';
+System.out.println(myGrade);
+```
+Alternatively, if we are familiar with ASCII values, we can use those to display certain characters:
+```java
+char myVar1 = 65, myVar2 = 66, myVar3 = 67;
+System.out.println(myVar1);
+System.out.println(myVar2);
+System.out.println(myVar3);
+```
+#### Code in Local Machine
+![code1.png](w3school_screenshot/java_characters/code_compile_and_run/code1.png)
+#### Compiling and Running the Code
+![compile_and_run1.png](w3school_screenshot/java_characters/code_compile_and_run/compile_and_run1.png)
+
+### Strings
+String data type is used to store a sequence of characters (text)
+```java
+String greeting = "Hello Java";
+System.out.println(greeting);
+```
+- String type is used so much and integrated in java in such a way, that it is called "the special ninth type"
+- String in java is non-primitive because it refers to an object.
+- String object has methods that are used to perform certain operations on strings
+
+### Java Characters Exercises
+#### Which data type is used to store a single character?
+![q1.png](w3school_screenshot/java_characters/q1.png)
+![q1_correct.png](w3school_screenshot/java_characters/q1_correct.png)
+#### The character inside a char variable must be surrounded by:
+![q2.png](w3school_screenshot/java_characters/q2.png)
+![q2_correct.png](w3school_screenshot/java_characters/q2_correct.png)
+#### What the output of the following code?
+![q3.png](w3school_screenshot/java_characters/q3.png)
+![q3_correct.png](w3school_screenshot/java_characters/q3_correct.png)
+#### To store more than one character (a text), you must use:
+![q4.png](w3school_screenshot/java_characters/q4.png)
+![q4_correct.png](w3school_screenshot/java_characters/q4_correct.png)
+#### What is the output of the following code?
+![q5.png](w3school_screenshot/java_characters/q5.png)
+#### Exercise Completed
+![Exercise_completed.png](w3school_screenshot/java_characters/Exercise_completed.png)
+
+## Non-primitive Data Types
+- Non-primitive data types are called **reference types** because they refer to objects.
+- Primitive types in Java are predefined and built into the language while non-primitive types are created by programmer except String.
+- Non-primitive types can be used to call methods to perform certain operations, whereas primitive types cannot.
+- Primitive types start with a lowercase letter (like int) while non-primitive types typically starts with an uppercase letter (like String).
+- Primitive types always hold a value, whereas non-primitive types can be null.
+
+## Java Type Casting
+Type casting is when we assign a value of one primitive data type to another type.
+In Java, there are two types of casting:
+- **Widening Casting** (automatically) converting a smaller type to a larger type size
+  - byte => short => char => int => long => float => double
+- **Narrowing Casting** (manually) converting a larger type to a smaller size type
+  - double => float => long => int => char => short => byte
+
+### Widening Casting
+Widening Casting is done automatically when passing a smaller size type to a larger size type:
+```java
+public class Main {
+    public static void main(String[] args) {
+        int myInt = 5;
+        double myDouble = myInt; // it automatically cast: int to double
+        
+        System.out.println(myInt);
+        System.out.println(myDouble);
+    }
+}
+```
+#### Code in Local Machine
+![code1.png](w3school_screenshot/java_type_casting/code_compile_and_run/code1.png)
+#### Compiling and Running the Code
+![compile_and_run1.png](w3school_screenshot/java_type_casting/code_compile_and_run/compile_and_run1.png)
+
+### Narrowing Casting
+Narrowing casting must be done manually by placing the type in parentheses ``()`` in front of the value
+```java
+public class Main {
+    public static void main(String[] args) {
+        double myDouble = 5.3d;
+        int myInt = (int) myDouble; // Manual Casting from double to int
+      
+        System.out.println(myDouble);
+        System.out.println(myInt);
+    }
+}
+```
+#### Code in Local Machine
+![code2.png](w3school_screenshot/java_type_casting/code_compile_and_run/code2.png)
+#### Compiling and Running the Code
+![compile_and_run2.png](w3school_screenshot/java_type_casting/code_compile_and_run/compile_and_run2.png)
+
+### Java Type Casting Exercise
+#### What is Type Casting?
+![q1.png](w3school_screenshot/java_type_casting/q1.png)
+![q1_correct.png](w3school_screenshot/java_type_casting/q1_correct.png)
+#### Passing a smaller size type to a larger size type, is called:
+![q2.png](w3school_screenshot/java_type_casting/q2.png)
+![q2_correct.png](w3school_screenshot/java_type_casting/q2_correct.png)
+#### True or False: Narrowing casting must be done manually
+![q3.png](w3school_screenshot/java_type_casting/q3.png)
+![q3_correct.png](w3school_screenshot/java_type_casting/q3_correct.png)
+#### What is the output of the following code?
+![q4.png](w3school_screenshot/java_type_casting/q4.png)
+![q4_correct.png](w3school_screenshot/java_type_casting/q4_correct.png)
+#### Convert the following double type (myDouble) to an int type:
+![q5.png](w3school_screenshot/java_type_casting/q5.png)
+#### Exercise Completed
+![Exercise_completed.png](w3school_screenshot/java_type_casting/Exercise_completed.png)
