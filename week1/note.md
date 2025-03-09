@@ -479,3 +479,48 @@ The general rules for naming variables are:
 #### Exercise Completed
 ![Exercise_completed.png](w3school_screenshot/java_identifiers/Exercise_completed.png)
 
+# Java - Data Types
+## Java Data Types
+As explained in the previous chapter, a variable in java must be a specified data type
+These are:
+- integer ``int``
+- float ``float`` which should use ``f`` keyword after decimal numbers indicating Floating Point Number
+- char ``char`` which is a single character in '' like 'D'.
+- boolean ``true`` or ``false``
+- String ``String`` which is anything in "", like "Rishav".
+
+But, Data Types are divided into Two major groups. The above are divided into these two types also including ``Arrays`` and ``Classes``.
+- Primitive Data Types
+  - ``byte``, ``short``, ``int``, ``long``, ``float``, ``double``, ``boolean``, and ``char``
+  - so, altogether 8 types
+- Non-primitive Data Types
+  - ``String``, ``Arrays``, and ``Classes``.
+  - So, altogether 3 types
+
+### Primitive Data Types
+A primitive Data Type specifies the type of a variable and the kind of values it can hold.
+There are 8 primitive data types in Java.
+
+| **Data Type** | **Description** |
+|---------------|-----------------|
+| ``byte`` | Stores whole numbers from -128 to 127 |
+| ``short`` | Stores whole numbers from -32,768 to 32,767 |
+| ``int`` | Stores whole numbers from -2,147,483,648 to 2,147,483,647 |
+| ``long`` | Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+| ``float`` | Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits |
+| ``double`` | Stores fractional numbers. Sufficient for storing 15 to 16 decimal digits |
+| ``boolean`` | Stores true or false vaules |
+| ``char`` | Stores a single character/letter or ASCII values |
+
+### Java - Data Type (after primitive Data Type) Exercises
+#### What is an int in Java?
+![q1.png](w3school_screenshot/java-data-types/q1.png)
+![q1_correct.png](w3school_screenshot/java-data-types/q1_correct.png)
+#### Add the correct data type for the following variables:
+![q2.png](w3school_screenshot/java-data-types/q2.png)
+![q2_correct.png](w3school_screenshot/java-data-types/q2_correct.png)
+#### byte, short, int, long, float, double, boolean and char are called:
+![q3.png](w3school_screenshot/java-data-types/q3.png)
+#### Exercise Completed
+![Exercise_completed.png](w3school_screenshot/java-data-types/Exercise_completed.png)
+
