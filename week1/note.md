@@ -564,3 +564,106 @@ There are 8 primitive data types in Java.
 #### Exercise Completed
 ![Exercise_completed.png](w3school_screenshot/java-data-types/Exercise_completed.png)
 
+## Java Numbers
+### Numbers
+Primitive number types are divided into two groups;
+- ``Integer Types`` from positive to negative whole number, which include ``byte``, ``short``, ``int``, and ``long``.
+- ``Floating Point Types`` representing numbers in fractional part, ``float``, and ``double``.
+
+### Integer Types
+#### Byte
+It store whole numbers from -128 to 127 and used to save memory.
+```java
+byte myNum = 100;
+System.out.println(myNum);
+```
+
+#### Short
+The ``short`` data type can store whole numbers from -32768 to 32767
+```java
+short myNum = 5000;
+System.out.println(myNum);
+```
+
+#### Int
+The ``int`` data type can store whole numbers from -2147483648 to 2147483647
+```java
+int myNum = 100000;
+System.out.println(myNum);
+```
+
+#### Long
+The ``long`` data type can store whole numbers from -9223372036854775808 to 9223372036854775807
+but, at the end of the value "L" keyword should be introduced.
+```java
+long myNum = 15000000000000L;
+System.out.println(myNum);
+```
+
+### Floating Point Types
+We should use a floating point type whenever we need a number with a decimal, such as 9.99 ir 3.14515
+The ``float`` and ``double`` data types can store fractional numbers.
+- We should put "f" for floats and "d" for doubles at the end of the value
+```java
+float myNum = 5.75f;
+System.out.println(myNum);
+```
+
+```java
+double myNum = 19.99d;
+System.out.println(myNum);
+```
+- Float can only have six or seven decimal digits.
+- Double can have a precision of about 16 digits. So, ``double`` is safer to use.
+
+### Scientific Numbers
+A floating point number can also be a scientific number with an "e" to indicate the power of 10.
+```java
+float f1 = 35e3f; // it means that 35 * 10 to the power 3 and f.
+double d1 = 12E4d; // it means that 12 * 10 to the power 4 and d.
+System.out.println(f1);
+System.out.println(d1);
+```
+#### Code in Local Machine
+![code1.png](w3school_screenshot/java_number_data_type/code_compile_and_run/code1.png)
+#### Compiling and Running the Code
+![compile_and_run1.png](w3school_screenshot/java_number_data_type/code_compile_and_run/compile_and_run1.png)
+
+### Java Number Exercise
+#### Integer types are used to store:
+![q1.png](w3school_screenshot/java_number_data_type/q1.png)
+![q1_correct.png](w3school_screenshot/java_number_data_type/q1_correct.png)
+#### Which is NOT a valid integer type?
+![q2.png](w3school_screenshot/java_number_data_type/q2.png)
+![q2_correct.png](w3school_screenshot/java_number_data_type/q2_correct.png)
+#### True or False:A float variable has greater precision than double.
+![q3.png](w3school_screenshot/java_number_data_type/q3.png)
+![q3_correct.png](w3school_screenshot/java_number_data_type/q3_correct.png)
+#### What is the correct letter suffix to use for float values?
+![q4.png](w3school_screenshot/java_number_data_type/q4.png)
+#### Exercise Completed
+![Exercise_completed.png](w3school_screenshot/java_number_data_type/Exercise_completed.png)
+
+## Java Boolean Data Types
+### Boolean Types
+- It is ``true`` or ``false`` which corresponds to on or off and also yes or no.
+```java
+boolean hadEaten = false;
+boolean hadLearnt = true;
+System.out.println(hadEaten);
+System.out.println(hadLearnt);
+```
+- mostly used for conditional testing.
+
+### Boolean Exercises
+#### What is the correct syntax for declaring a boolean variable in Java?
+![q1.png](w3school_screenshot/java_boolean/q1.png)
+![q1_correct.png](w3school_screenshot/java_boolean/q1_correct.png)
+#### The boolean data type can take two values, which are:
+![q2.png](w3school_screenshot/java_boolean/q2.png)
+![q2_correct.png](w3school_screenshot/java_boolean/q2_correct.png)
+#### What is the output of the following code? boolean isFishTasty = false; System.out.println(isFishTasty);
+![q3.png](w3school_screenshot/java_boolean/q3.png)
+#### Exercise Completed
+![Exercise_completed.png](w3school_screenshot/java_boolean/Exercise_completed.png)
+
