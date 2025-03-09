@@ -1,4 +1,4 @@
-# Java Week 1 notes
+# Java - Introduction
 
 - Java is a popular programming language, created in 1995.
 - It is owned by Oracle, and more than 3 billion devices run java 
@@ -156,6 +156,8 @@ System.out.println("Hello World");
 ![q3.png](w3school_screenshot/comment_exercise/q3.png)
 #### Exercise Completed
 ![exercise_completed.png](w3school_screenshot/comment_exercise/exercise_completed.png)
+
+# Java - Output
 
 ## Java Output/Print
 
@@ -442,4 +444,38 @@ System.out.println(x + y + z);
 #### Exercise Completed
 ![Exercise_Completed.png](w3school_screenshot/java_declare_variable/Exercise_Completed.png)
 
+## Java Identifiers
+### Identifiers
+- All java **variables** must be **identified** with **unique names**.
+- So, these unique names are actually called **identifiers**.
+- Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+- But, it is recommended to use descriptive names in order to create understandable and maintainable code:
+
+```java
+// Better
+int minutesPerHour = 60;
+
+// good, but can be better understandable
+int m = 60;
+```
+
+The general rules for naming variables are:
+- Names can contain letters(a,b,c ...), digits(3,3,4,), underscores(_), and dollar signs ($).
+- Names must begin with a letter, rishav123
+- Names should start with a lowercase letter, and cannot contain whitespace.
+- Names can also begin with $ and _. $rishavChaudhary
+- Names are case-sensitive. So, myVar and myvar are different
+- Reserved words (like java keywords, such as ``int`` or ``boolean``) cannot be used as names.
+
+### Java Identifiers Exercise
+#### Which is NOT a legal variable name?
+![q1.png](w3school_screenshot/java_identifiers/q1.png)
+![q1_correct.png](w3school_screenshot/java_identifiers/q1_correct.png)
+#### True or False: All Java variables must be identified with unique names.
+![q2.png](w3school_screenshot/java_identifiers/q2.png)
+![q2_correct.png](w3school_screenshot/java_identifiers/q2_correct.png)
+#### Create a variable named maxSpeed and assign the value 120 to it.
+![q3.png](w3school_screenshot/java_identifiers/q3.png)
+#### Exercise Completed
+![Exercise_completed.png](w3school_screenshot/java_identifiers/Exercise_completed.png)
 
