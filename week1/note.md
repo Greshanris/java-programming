@@ -479,6 +479,46 @@ The general rules for naming variables are:
 #### Exercise Completed
 ![Exercise_completed.png](w3school_screenshot/java_identifiers/Exercise_completed.png)
 
+### Java Variables - Examples
+```java
+// Student Rishav's Data
+String studentName = "Rishav Chaudhary";
+int studentId = 220534;
+int studentAge = 23;
+float studentFee = 30000.45f;
+char studentGrade = 'A'; // char stores in ASCII number, so even we write 65 it still prints A.
+
+// printing the student's data
+System.out.println("Student Name: " + studentName);
+System.out.println("Student ID: " + studentId);
+System.out.println("Student Age: " + studentAge);
+System.out.println("Student Fee: " + studentFee);
+System.out.println("Student Grade: " + studentGrade);
+```
+#### Code in Local Machine
+![code1.png](w3school_screenshot/java-variable-examples/code1.png)
+#### Compiling and Running the Code
+![compile_and_run1.png](w3school_screenshot/java-variable-examples/compile_and_run1.png)
+
+### Calculating the area of rectangle
+```java
+int length = 6;
+int width = 9;
+int area; // initializing
+
+// calculating the area of a rectangle
+area = length * width;
+
+// printing the variable
+System.out.println("Length: " + length);
+System.out.println("width: " + width);
+System.out.println("Area of the rectangle: " + area);
+```
+#### Code in Local Machine
+![code2.png](w3school_screenshot/java-variable-examples/code2.png)
+#### Compiling and Running the Code
+![compile_and_run2.png](w3school_screenshot/java-variable-examples/compile_and_run2.png)
+
 # Java - Data Types
 ## Java Data Types
 As explained in the previous chapter, a variable in java must be a specified data type
