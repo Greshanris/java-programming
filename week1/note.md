@@ -417,3 +417,29 @@ System.out.println(x + y + z);
 ![code1.png](w3school_screenshot/java_declare_variable/code_compile_and_run/code1.png)
 #### Compiling and Running the Code
 ![compile_and_run1.png](w3school_screenshot/java_declare_variable/code_compile_and_run/compile_and_run1.png)
+
+### One Value to Multiple Variables
+We can also assign the **same value** to multiple variables in one line
+```java
+int x, y, z;
+x = y = z = 543; // Assigning the same value to multiple variables in one line
+System.out.println(x + y + z);
+```
+#### Code in Local Machine
+![code2.png](w3school_screenshot/java_declare_variable/code_compile_and_run/code2.png)
+#### Compiling and Running the Code
+![compile_and_run2.png](w3school_screenshot/java_declare_variable/code_compile_and_run/compile_and_run2.png)
+
+### Java Declare Multiple Variables
+#### Which of the following declares multiple variables of the same type?
+![q1.png](w3school_screenshot/java_declare_variable/q1.png)
+![q1_correct.png](w3school_screenshot/java_declare_variable/q1_correct.png)
+#### Fill in the missing parts to create three variables of the same type, using a comma-separated list:
+![q2.png](w3school_screenshot/java_declare_variable/q2.png)
+![q2_correct.png](w3school_screenshot/java_declare_variable/q2_correct.png)
+#### Fill in the missing parts to assign the same value to multiple variables in one line:
+![q3.png](w3school_screenshot/java_declare_variable/q3.png)
+#### Exercise Completed
+![Exercise_Completed.png](w3school_screenshot/java_declare_variable/Exercise_Completed.png)
+
+
