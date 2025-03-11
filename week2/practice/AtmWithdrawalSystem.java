@@ -12,16 +12,21 @@ import java.util.Scanner;
 public class AtmWithdrawalSystem {
     public static void main(String[] args) {
         double balanceUsd = 5000;
-        while (balanceUsd == 0);
-        {
+        double withdrawAmount;
+
+        while (balanceUsd > 0) {
+            System.out.println("Balance: " + balanceUsd);
             System.out.println("Enter the amount you want to withdraw: ");
             Scanner sc = new Scanner(System.in);
 
-            double withdrawAmount = sc.nextDouble();
-            double remainingAmount = balanceUsd = withdrawAmount
-           if (remainingAmount < 0)
-           }
+            withdrawAmount = sc.nextDouble();
 
+            if (balanceUsd >= withdrawAmount) {
+                balanceUsd = balanceUsd - withdrawAmount;
+                System.out.println("Amount withdrawn is " + withdrawAmount);
+            } else {
+                System.out.println("Withdraw amount is higher than in the balance.");
+            }
         }
-        }
+    }
 }
