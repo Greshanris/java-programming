@@ -85,3 +85,68 @@ switch (day) {
 ![q3.png](w3school/java_switch/q3.png)
 #### Exercise Completed
 ![exercise_completed.png](w3school/java_switch/exercise_completed.png)
+
+## Java While Loops
+### Loops
+- Loops can execute a block of code as long as a specified condition is reached.
+- Loops are handy because they save time, reduce errors, and they make code more readable
+### While Loop
+- The ``while`` loop loops through a block of code as long as a specified condition is ``true``:
+```java
+while(condition) {
+    // code block to be executed
+        }
+```
+#### Example
+```java
+// below code in the loop will run, over and over again as long as variable i is less than 5
+int i = 0;
+while (i < 5) {
+    System.out.println(i);
+    i++;
+        }
+```
+### While loop Exercises
+#### Question 1
+![q1.png](w3school/java_while_loop/while_loop/q1.png)
+![q1_correct.png](w3school/java_while_loop/while_loop/q1_correct.png)
+#### Question 2
+![q2.png](w3school/java_while_loop/while_loop/q2.png)
+![q2_correct.png](w3school/java_while_loop/while_loop/q2_correct.png)
+#### Question 3
+![q3.png](w3school/java_while_loop/while_loop/q3.png)
+#### Exercise Completed
+![Exercise_completed.png](w3school/java_while_loop/while_loop/Exercise_completed.png)
+
+## Java Do/While Loop
+### The Do/While Loop
+- The ``do/while`` loop is variant of the ``while`` loop.
+- The loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+```java
+do {
+    //code block to be executed
+}
+while (condition);
+```
+#### Example
+```java
+// here the loop will be executed at least once and then it will loop until the condition is false
+int i = 0;
+do {
+    System.out.println(i);
+    i++;
+}
+while (i < 5);
+```
+### Do/While Exercises
+#### Question 1
+![q1.png](w3school/java_while_loop/do_while_loop/q1.png)
+![q1_correct.png](w3school/java_while_loop/do_while_loop/q1_correct.png)
+#### Question 2
+![q2.png](w3school/java_while_loop/do_while_loop/q2.png)
+![q2_correct.png](w3school/java_while_loop/do_while_loop/q2_correct.png)
+#### Question 3
+![q3.png](w3school/java_while_loop/do_while_loop/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3school/java_while_loop/do_while_loop/exercise_completed.png)
