@@ -302,4 +302,122 @@ while (i < 10) {
 #### Exercise Completed
 ![exercise_completed.png](w3school/java_break_continue/exercise_completed.png)
 
-## Java Array
+## Java Arrays
+### Java Arrays
+- Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+```java
+String[] cars = {"Rolls Royce","Bugatti Chiron", "Ford Mustang", "Lambhorghini", "Ferrari Aventador"};
+int[] myNum = {10, 20, 30, 40};
+
+// to access the elements of an array
+System.out.println(cars[0]);
+System.out.println(myNum[2]);
+
+// to change an array element
+cars[2] = "Mustang";
+System.out.println(cars[2]);
+
+// to know the Array length
+System.out.println(cars.length);
+```
+
+### Java Array Exercise
+#### Question 1
+![q1.png](w3school/java_arrays/arrays/q1.png)
+![q1_correct.png](w3school/java_arrays/arrays/q1_correct.png)
+#### Question 2
+![q2.png](w3school/java_arrays/arrays/q2.png)
+![q2_correct.png](w3school/java_arrays/arrays/q2_correct.png)
+#### Question 3
+![q3.png](w3school/java_arrays/arrays/q3.png)
+![q3_correct.png](w3school/java_arrays/arrays/q3_correct.png)
+#### Question 4
+![q4.png](w3school/java_arrays/arrays/q4.png)
+![q4_correct.png](w3school/java_arrays/arrays/q4_correct.png)
+#### Question 5
+![q5.png](w3school/java_arrays/arrays/q5.png)
+#### Exercise Completed
+![exercise_completed.png](w3school/java_arrays/arrays/exercise_completed.png)
+
+## Java Loop Through an Array
+- We can loop throught the array elements with the ``for``loop, and we can use the ``length`` property to specify how many times the loop should run.
+```java
+String[] cars = {"Bugatti", "Lambhorghini", "Ferrari", "BMW", "Ford Mustang"};
+for (int i = 0; i < cars.length; i++) {
+    System.out.println(cars[i]);
+}
+
+// we can even loop through an array with For-Each
+//for (type variable : arrayname) {
+//        ...
+//}
+for (String i : cars) {
+    System.out.println(i);
+}
+```
+### Java Array and Loops
+#### Question 1
+![q1.png](w3school/java_arrays/java_loop_through_an_array/q1.png)
+![q1_correct.png](w3school/java_arrays/java_loop_through_an_array/q1_correct.png)
+#### Question 2
+![q2.png](w3school/java_arrays/java_loop_through_an_array/q2.png)
+![q2_correct.png](w3school/java_arrays/java_loop_through_an_array/q2_correct.png)
+#### Question 3
+![q3.png](w3school/java_arrays/java_loop_through_an_array/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3school/java_arrays/java_loop_through_an_array/exercise_completed.png)
+
+## Java Multi-Dimensional Arrays
+### Multidimensional Arrays
+- A multidimensional array is an array of arrays
+- They are useful when we want to store data as a tabular form, like a table with rows and columns.
+```java
+// to create a two-dimensional array, we add each array within its own set of curly braces
+int[][] myNumbers = {{1, 2, 3, 4}, {5, 6, 7}};
+```
+- **myNumbers** is now an array with two arrays as its elements
+
+### Access Elements and Change Element Values
+```java
+// to access the elements in the array, we have to specify two indexes
+int[][] myNumbers = {{1, 2, 3, 4}, {5, 6, 7}};
+System.out.println(myNumbers[1][2]);
+
+// to change the value of an element
+int[][] myNumbers = {{1, 2, 3, 4}, {5, 6, 7}};
+myNumbers[1][2] = 9;
+System.out.println(myNumbers[1][2]);
+```
+### Loop through a multi-dimensional Array
+- We can use a ``for loop`` inside another ``for loop`` to get the elements of a two-dimensional array
+```java
+int[][] myNumbers = {{1, 2, 3, 4}, {5, 6, 7}};
+for (int i = 0; i < myNumbers.length; ++i) {
+    for (int j = 0; j < myNumbers[i].length; ++j) {
+        System.out.println(myNumbers[i][j]);
+    }
+}
+```
+- We could just a **for-each** loop, which is considered easier to read and write
+```java
+int[][] myNumbers = {{1, 2, 3, 4}, {5, 6, 7}};
+for (int[] row : myNumbers) {
+    for (int i : row) {
+        System.out.println(i);
+    }
+}
+```
+### Multi-Dimensional Array
+#### Question 1
+![q1.png](w3school/java_arrays/multi-dimensional_array/q1.png)
+![q1_correct.png](w3school/java_arrays/multi-dimensional_array/q1_correct.png)
+#### Question 2
+![q2.png](w3school/java_arrays/multi-dimensional_array/q2.png)
+![q2_correct.png](w3school/java_arrays/multi-dimensional_array/q2_correct.png)
+#### Question 3
+![q3.png](w3school/java_arrays/multi-dimensional_array/q3.png)
+![q3_correct.png](w3school/java_arrays/multi-dimensional_array/q3_correct.png)
+#### Question 4
+![q4.png](w3school/java_arrays/multi-dimensional_array/q4.png)
+#### Exercise Completed
+![exercise_completed.png](w3school/java_arrays/multi-dimensional_array/exercise_completed.png)
