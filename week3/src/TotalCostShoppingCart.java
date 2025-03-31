@@ -28,6 +28,7 @@ public class TotalCostShoppingCart {
             } else if (sum > 600) {
                 sum *= 0.9;
             }
+            return sum;
         }
         return sum;
     }

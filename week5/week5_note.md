@@ -248,3 +248,166 @@ public class Main {
 ![q4.png](w3schools/week_5/java_class_attributes/q4.png)
 #### Exercise Completed
 ![exercise_completed.png](w3schools/week_5/java_class_attributes/exercise_completed.png)
+
+### Java Class Methods
+- We learned from the Java Methods that methods are declared within a class, and that they are used to perform certain actions:
+```java
+// Create a method named myMethod() in Main:
+public class Main {
+    static void myMethod() {
+      System.out.println("Hello World!");
+    }
+}
+```
+- ``myMethod()`` prints a text (the action), when it is **called.** 
+- To call a method, we write the method's name followed by two parantheses () and a semicolon;
+
+```java
+public class Main {
+    static void myMethod() {
+      System.out.println("Hello World!");
+    }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+```
+
+### Static vs Public
+- We will often see Java programs that have either ``static`` or ``public`` attributes and methods.
+- In the example above, we created a ``static`` method, which means that it can be accessed without creating an object of the class, unlike ``static`` method, which means that it can be accessed without creating an object of the class, unlike ``public``, which can only be accessed by objects.
+
+```java
+public class Main {
+    // Static Method
+  static void myStaticMethod() {
+    System.out.println("Static methods can be called without creating objects.");
+  }
+  
+  // Public Method
+  public void myPublicMethod() {
+    System.out.println("Public methods must be called by creating objects");
+  }
+  
+  // Main method
+  public static void main(String[] args) {
+    myStaticMethod(); // call the static method
+    // myPublicMethod(); // this would compile an error
+    
+    Main myObj = new Main(); // Create an object of Main
+    myObj.myPublicMethod(); // Call the public method on the object
+  }
+}
+```
+#### We will learn more about these keywords (called modifiers) in the Java Modifiers chapter.
+
+### Access Methods with an Object
+```java
+// Create a Car Object named myCar. Call the fullThrottle() and speed() methods on the myCar object, and run the program:
+public class Main {
+    // create a fullThrottle() method
+  public void fullThrottle() {
+    System.out.println("The car is going as fast as it can!");
+  }
+  
+  // create a speed() method and add a parameter
+  public void speed(int maxSpeed) {
+    System.out.println("Max speed is: " + maxSpeed);
+  }
+  
+  // Inside main, call the methods on the myCar object
+  public static void main(String[] args) {
+    Main myCar = new Main(); // Create a myCar object
+    myCar.fullThrottle();
+    myCar.speed(200);
+  }
+}
+```
+#### Example explained
+- We created a custom ``Main`` class with ``class`` keyword.
+- We created the ``fullThrottle()`` and ``speed()`` methods in the ``Main`` class.
+- The ``fulThrottle()`` method and the ``speed()`` method will print out some text, when they are called.
+- The ``speed()`` method accepts an ``int`` parameter called ``maxSpeed``
+- In order to use the ``Main`` class and it's methods, we need to create an object of the ``Main` class.
+- Then, go to the ``main()`` method, which we know by now is a built-in Java method that runs your program (any code inside main is executed).
+- By using the ``new`` keyword we created an object with the name ``myCar``.
+- Then, we call the ``fulThrottle()`` and ``speed()`` methods on the ``myCar`` object, and run the program using the name of the object ``myCar`` followed by a dot(``.``), followed by the name of the method (``fullThrottle();`` and ``speed(200);``).
+- Notice that we add an ``int`` parameter of **200** inside the ``speed()`` method.
+
+#### To access the object's Attributes and Methods
+- We use dot(``.``) followed by the attribute or method name, followed by a set of parentheses (), followed by semicolon(``;``).
+
+### Using multiple classes
+- Like we specified in the classes chapter, it is a good practice to create an object of a class, and access it in another class.
+- Remember that the name of the java file should match the class name.
+
+```java
+// Main.java file
+public class Main {
+    public void fullThrottle() {
+      System.out.println("The car is going as fast as it can!");
+    }
+    
+    public void speed(int maxSpeed) {
+      System.out.println("Max speed is: " + maxSpeed);
+    }
+}
+```
+
+```java
+// Second.java
+class Second {
+  public static void main(String[] args) {
+    Main myCar = new Main(); // Creating a object
+    myCar.fullThrottle(); // call the fullThrottle() method
+    myCar.speed(200); // call the speed() method
+  }
+}
+```
+- Just compile both and run ``Second.java`` file.
+- We can also use IDE
+
+### Java Class Methods Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_class_methods/q1.png)
+![q1_correct.png](w3schools/week_5/java_class_methods/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_class_methods/q2.png)
+![q2_correct.png](w3schools/week_5/java_class_methods/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_class_methods/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_class_methods/exercise_completed.png)
+
+### Java Constructors
+- A constructor in Java is a **special method** that is used to initialize objects.
+- The constructor is called when an object of a class is created.
+- It can be used to set initial values for object attributes.
+
+```java
+public class Main {
+    int x;
+    
+    // constructor usage which is a special method that is used to initialize objects.
+    // It is called when an object of a class is created.
+    // It can be used to set initial values for object attributes.
+  
+    public Main() {
+        x = 5; // Set the initial value for the class attribute x
+    }
+
+    public static void main(String[] args) {
+      Main myObj = new Main(); // Creating an object of class Main (This will call the constructor)
+      System.out.println(myObj.x); // Print the value of x
+    }
+}
+```
+- The constructor name must match the class name and it cannot have a return type (like void).
+- Also, note that the constructor is called when the object is created.
+- All classes have constructors by default: if we do not create a class constructor yourself, Java creates one for you. However, then we are not able to set initial values for object attributes.
+
+### Constructor Parameters
+- Constructors can also take parameters, which is used to initialize attributes.
+
+The following example adds an ``int y`` parameter to the constructor. Inside the constructor, we set x to y (x=y). When we call the constructor, we pa
