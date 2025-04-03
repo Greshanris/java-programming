@@ -409,5 +409,83 @@ public class Main {
 
 ### Constructor Parameters
 - Constructors can also take parameters, which is used to initialize attributes.
+- The example below adds an ``int y`` parameter to the constructor. Inside the constructor, we set x to y (x=y). When we call the constructor, we pass a parameter to the constructor (5), which will set the value of x to 5:
 
-The following example adds an ``int y`` parameter to the constructor. Inside the constructor, we set x to y (x=y). When we call the constructor, we pa
+```java
+public class Main {
+    int x;
+    
+    public Main (int y) {
+        x = y;
+    }
+
+  public static void main(String[] args) {
+    Main myObj = new Main(5);
+    System.out.println(myObj.x); // outputs 5
+  }
+}
+```
+- We can also have as many parameters as we want.
+```java
+public class Main {
+    int modelYear;
+    String modelName;
+    
+    public Main(int year, String name) {
+        modelYear = year;
+        modelName = name;
+    }
+
+  public static void main(String[] args) {
+    Main myCar = new Main(1969, "Mustang");
+    System.out.println(myCar.modelYear + " " + myCar.modelName); // Outputs 1969 Mustang
+  }
+}
+```
+### Java Constructors Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_constructors/q1.png)
+![q1_correct.png](w3schools/week_5/java_constructors/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_constructors/q2.png)
+![q2_correct.png](w3schools/week_5/java_constructors/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_constructors/q3.png)
+![q3_correct.png](w3schools/week_5/java_constructors/q3_correct.png)
+#### Question 4
+![q4.png](w3schools/week_5/java_constructors/q4.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_constructors/exercise_completed.png)
+
+### Java Modifiers
+- Since, we are quite familiar with the ``public`` keyword that appears in almost all of our examples:
+```java
+public class Main{}
+```
+- The ``public`` keyword is an **access modifier**, meaning that it is used to set the access level for classes, attributes, methods, and constructors.
+- We divide modifiers into two groups:
+  - **Access Modifiers** - controls the access level
+  - **Non-Access Modifiers** - do not control access level, but provides other functionality
+### Access Modifiers
+- For **classes**, we can use either ``public`` or _default_:
+  - ``public`` : The class is accessible by any other class
+  - _default_ : The class is only accessible by classes in the same package. This is used when we do not specify a modifier.
+
+- For **Attributes, methods, and constructors**, we can use one of the following:
+  - ``public`` : The code is accessible for all classes
+  - ``private`` : The code is only accessible within the declared class
+  - ``default`` : The code is only accessible in the same package. This is used when we do not specify a modifier.
+  - ``protected`` : The code is accessible in the same package and **subclasses**.
+
+### Non-Access Modifiers
+- For **classes**, we can use either ``final`` or ``abstract``:
+  - ``final`` : The class cannot be inherited by other classes.
+  - ``abstract`` : The class cannot be used to create objects.
+- For **attributes and methods**, we can use one of the following:
+  - ``final`` : Attributes and methods cannot be overridden/modified
+  - ``static``: Attributes and methods belongs to the class, rather than an object
+  - ``abstract`` : Can only be used in the abstract class, and can only be used on methods. The method does not have a body
+    - For instance, **abstract void run();** The body is provided by the subclass (inherited from).
+  - ``transient`` : Attributes and methods are skipped when serializing the object containing them.
+  - ``synchronized`` : Methods can only be accessed by one thread at a time.
+  - ``volatile`` : The value of an attribute is not cached thread-locally, and is always read from the "main memory".
