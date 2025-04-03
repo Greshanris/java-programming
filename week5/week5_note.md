@@ -489,3 +489,249 @@ public class Main{}
   - ``transient`` : Attributes and methods are skipped when serializing the object containing them.
   - ``synchronized`` : Methods can only be accessed by one thread at a time.
   - ``volatile`` : The value of an attribute is not cached thread-locally, and is always read from the "main memory".
+
+### Final
+- If we do not want the ability to override existing attribute values, we declare attributes as ``final`` .
+
+```java
+public class Main {
+    final int x = 10;
+    final double PI = 3.14;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    myObj.x = 50; // will generate an error: cannot assign a value to a **final** variable.
+    myObj.PI = 25; // will generate an error: cannot assign a value to a **final** variable.
+    System.out.println(myObj.x);
+  }
+}
+```
+
+### Static
+- A ``static`` method means that it can be accessed without creating an object of the class, unlike ``public``.
+
+```java
+// an example to demonstrate the differencecs between static and public methods:
+public class Main {
+    // Static Method
+  static void myStaticMethod() {
+    System.out.println("Static methods can be called without creating objects");
+  }
+  
+  // Public method
+  public void myPublicMethod() {
+    System.out.println("Public methods must be called by creating objects");
+  }
+  
+  // Main method
+  public static void main(String[] args) {
+    myStaticMethod(); // call the static method directly
+//    myPublicMethod(); // This would output an error
+    
+    Main myObj = new Main(); // Create an object of Main
+    myObj.myPublicMethod(); // Call the public method
+  }
+}
+```
+
+### Abstract
+- An ``abstract`` method belongs to an ``abstract`` class, and it does not have a body. The body is provided by the subclass.
+```java
+// code from filename: Main.java
+// abstract class
+abstract class Main {
+    public String fname = "Rishav";
+    public int age = 23;
+    public abstract void study(); // abstract method
+}
+
+// Subclass (inherit from Main)
+class Student extends Main {
+    public int graduationYear = 2026;
+    public void study() { // the body of the abstract method is provided here
+      System.out.println("Studying all day long");
+    }
+}
+
+// End code from filename: Main.java
+
+// Code from filename: Second.java
+class Second {
+  public static void main(String[] args) {
+    // create an object of the Student class (which inherits attributes and methods from Main)
+    Student myObj = new Student();
+
+    System.out.println("Name: " + myObj.fname);
+    System.out.println("Age: " + myObj.age);
+    System.out.println("Graduation Year: " + myObj.graduationYear);
+    myObj.study();
+  }
+}
+```
+
+### Java Modifiers Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_modifiers/q1.png)
+![q1_correct.png](w3schools/week_5/java_modifiers/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_modifiers/q2.png)
+![q2_correct.png](w3schools/week_5/java_modifiers/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_modifiers/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_modifiers/exercise_completed.png)
+
+### Java Encapsulation
+**Encapsulation**
+- The meaning of **Encapsulation** is to make sure that "sensitive" data is hidden from users. To achieve this, we must:
+  - declare class variables/attributes as ``private``.
+  - provide public **get** and **set** methods to access and update the value of a ``private`` variable.
+
+**Get and Set**
+- We learned from the previous chapter that ``private`` variables can only be accessed within the same class (an outside class has no access to it)
+- However, it is possible to access them if we provide a public get and set methods.
+
+=> The ``get`` method returns the variable value, and the ``set`` method sets the value.
+
+=> Syntax for both is that they start with either ``get`` or ``set``, followed by the name of the variable, with the first letter in upper calse:
+
+```java
+public class Person {
+    private String name; // private = restricted accecss
+  
+  // Getter
+    public String getName() {
+        return name;
+    }
+    
+    // setter
+    public void setName(String newName) {
+        this.name = newName;
+    }
+}
+```
+
+- we cannot access the ``name`` attribute because it is declared as ``private``.
+
+```java
+
+public class Main {
+  public static void main(String[] args) {
+    Person myObj = new Person();
+    myObj.name = "Rishav"; // error
+    System.out.println(myObj.name); // error
+  }
+}
+```
+- If the variable was declared as ``public``, we would expect the output ``Rishav``.
+
+#### We can use the ``getName()`` and ``setName()`` methods to access and update the variable:
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    Person myObj = new Person();
+    myObj.setName("Rishav"); // set the value of the name variable to "Rishav"
+    System.out.println(myObj.getName());
+  }
+}
+```
+
+#### Why Encapsulation?
+- Better control of class attributes and methods
+- Class attributes can be made **read-only** (if you only use the ``get`` method), or **write-only** (if we only use the ``set`` method)
+- Flexible: the programmer can change one part of the code without affecting other parts.
+- Increased security of data
+
+### Java Encapsulation Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_encapsulation/q1.png)
+![q1_correct.png](w3schools/week_5/java_encapsulation/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_encapsulation/q2.png)
+![q2_correct.png](w3schools/week_5/java_encapsulation/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_encapsulation/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_encapsulation/exercise_completed.png)
+
+### Java Packages and API
+- A package in Java is used to group related classes.
+- Think of it as a folder in a file directory.
+- We use packages to avoid name conflicts, and to write a better maintainable code.
+- Packages are divided into two categories:
+  - Built-in Packages (packages from the Java API)
+  - User-defined Packages (create your own packages)
+
+### Built-In Packages
+- The Java API is a library of prewritten classes, that are free to use, included in the Java Development Environment.
+- The library contains components for managing input, database programming, and much much more. The complete list can be found at Oracles website:
+  https://docs.oracle.com/javase/8/docs/api/
+- The library is divided into **packages** and **classes**. Meaning we can either import a single class (along with its methods and attributes), or a whole package that contain all the classes that belong to the specified package.
+- To use a class or a package from the library, we need to use the ``import`` keyword:
+
+```java
+import package.name.Class; // Import a single class
+import package.name.*; // Import the whole package
+```
+
+### Import a Class
+- If we find a class we want to use, for example, the ``Scanner`` class, which is used to get user input, write the following code:
+```java
+import java.util.Scanner;
+```
+- In the example above,``java.util`` is a package, while ``Scanner`` is a class of the ``java.util`` package.
+- To use the ``Scanner`` class, we need to create an object of the class, and use any of the available methods found in the ``Scanner`` class documentation. 
+- In our example, we will use the ``nextLine()`` method, which is used to read a complete line:
+
+```java
+// Using the Scanner class to get user input
+import java.util.Scanner;
+
+class MyClass {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Enter username");
+    
+    String userName = myObj.nextLine();
+    System.out.println("Username is: " + userName);
+  }
+}
+```
+
+### Import a Package
+- There are many packages to choose from. In the previous example, we used the ``Scanner`` class from the ``java.util`` package.
+- This package also contains date and time facilities, random-number generator and other utility classes.
+- To import a whole package, end the sentence with an asterisk sign (``*``). The following example will import ALL the classes in the ``java.util`` package:
+
+```java
+import java.util.*;
+```
+
+### User-defined Packages
+- To create our own package, we need to understand that Java uses a file system directory to store them.
+- Just like folders on our computer:
+  - root
+    - mypack
+      - MyPackageClass.java
+
+- So, to create a package, we need to use the ``package`` keyword:
+```java
+package mypack;
+class MyPackageClass {
+  public static void main(String[] args) {
+    System.out.println("This is my package!");
+  }
+}
+```
+- Then, we can save the file as **MyPackageClass.java**, and compile it:
+```commandline
+C:\Users\Your Name>javac MyPackageClass.java
+```
+- Then, compile the package:
+```commandline
+C:\Users\Your Name>javac -d . MyPackageClass.java
+```
+- This forces the compile to create the "mypack" package.
+- The ``-d`` keyword specifies the destination for where to save the class file. We can use any directory name, like c:/user (windows)
+- or, if we want to keep the package within the same directory, we can use the dot sign "``.``", like in the example above.
