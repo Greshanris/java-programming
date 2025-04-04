@@ -735,3 +735,420 @@ C:\Users\Your Name>javac -d . MyPackageClass.java
 - This forces the compile to create the "mypack" package.
 - The ``-d`` keyword specifies the destination for where to save the class file. We can use any directory name, like c:/user (windows)
 - or, if we want to keep the package within the same directory, we can use the dot sign "``.``", like in the example above.
+- **Note:** The package name should be written in lower case to avoid conflict with class names.
+
+So, when we compiled the package in the example above, a new folder was created, called "mypack".
+
+To run the **MyPackageClass.java** file, we write the following:
+```commandline
+C:\Users\Your Name> java mypack.MyPackageClass
+```
+- And the output will be:
+```commandline
+This is my package!
+```
+
+### Java Package Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_packages/q1.png)
+![q1_correct.png](w3schools/week_5/java_packages/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_packages/q2.png)
+![q2_correct.png](w3schools/week_5/java_packages/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_packages/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_packages/exercise_completed.png)
+
+### Java Inheritance
+**Java Inheritance (Subclass and Superclass)**
+- In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:
+  - **subclass** (child) - the class that inherits from another class
+  - **superclass** (parent) - the class being inherited from
+- To inherit from a class, we use the ``extends`` keyword
+- For example, here we will inherit the attributes and methods from the ``Vehicle`` class(superclass) to the ``car`` class (subclass). 
+
+```java
+class Vehicle {
+    protected String brand = "Ford"; // vehicle attribute
+    public void honk() {
+      System.out.println("Tuut, tuut1");
+    }
+}
+
+class Car extends Vehicle {
+    private String modelName = "Mustang"; // car attributes
+
+  public static void main(String[] args) {
+    // Create a myCar Object
+    Car myCar = new Car();
+    
+    // Call the honk() method (from the Vehicle class) on the myCar object
+    myCar.honk();
+    
+    // Display the value of the brand attribute (from the vehicle class) and the value of the modelName from the Car class
+    System.out.println(myCar.brand + " " + myCar.modelName);
+  }
+}
+```
+
+**note:**
+- Did you notice the ``protected`` modifier in vehicle?
+  - We set the brand attribute in Vehcicle to a protected access modifier. If it was set to ``private``, the Car class would not be able to access it.
+- Why and When to use "Inheritance"?
+  - It is useful for code reusability: reuse attributes and methods of an existing class when we create a new class
+
+### The final Keyword
+- If we do not want other classes to inherit from a class, use the ``final`` keyword:
+```java
+// If we try to access a final class, Java will generate an error:
+final class Vehicle {
+    // ...
+}
+
+class Car extends Vehicle {
+    // ...
+}
+```
+### Java Inheritance Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_inheritance/q1.png)
+![q1_correct.png](w3schools/week_5/java_inheritance/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_inheritance/q2.png)
+![q2_correct.png](w3schools/week_5/java_inheritance/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_inheritance/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_inheritance/exercise_completed.png)
+
+### Java Polymorphism
+- Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+- Like we specified in the previous chapter; **Inheritance** lets us inherit attributes and methods from another class.
+- **Polymorphism** uses those methods to perform different tasks. This allows us to perform a single action in different ways.
+- For instance, think of a superclass called ``Animal`` that has a method called ``animalSound()``. Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.).
+
+```java
+class Animal {
+    public void animalSound() {
+      System.out.println("The animal makes a sound");
+    }
+}
+
+class Pig extends Animal {
+    public void animalSound() {
+      System.out.println("The pig says: wee wee");
+    }
+}
+
+class Dog extends Animal {
+    public void animalSound() {
+      System.out.println("The dog says: bow wow");
+    }
+}
+```
+- Now, we can create a ``Pig`` and ``Dog`` objects and call the ``animalSound()`` method on both of them:
+
+```java
+import week5.Animal;
+
+class Main {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal(); 
+    Animal myPig = new Pig();
+    Animal myDog = new Dog();
+    
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+  }
+}
+```
+
+**Why and when to user "inheritance" and "polymorphism"?**
+- It is useful for code reusability: reuse attributes and methods of an existing class when we create a new class.
+
+### Java Polymorphism Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_polymorphism/q1.png)
+![q1_correct.png](w3schools/week_5/java_polymorphism/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_polymorphism/q2.png)
+![q2_correct.png](w3schools/week_5/java_polymorphism/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_polymorphism/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_polymorphism/exercise_completed.png)
+
+### Java Inner Classes
+- In Java, it is also possible to nest classes (a class within a class). 
+- The purpose of nested classes is to group classes that belong together, which makes our code more readable and maintainable.
+
+So, to access the inner class, we create an object of the outer class, and then create an object of the inner class:
+```java
+class OuterClass {
+    int x = 10;
+    
+    class InnerClass {
+        int y = 5;
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+```
+
+### Private Inner Class
+- Unlike a "regular" class, an inner class can be ``private`` or ``protected``. If we do not want outside objects to access the inner class, declare the class as ``private``.
+
+```java
+class OuterClass {
+    int x = 10;
+    
+    private class InnerClass {
+        int y = 5;
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+
+// this will result in error: OuterClass.InnerClass has private access in OuterClass
+```
+
+### Static Inner Class
+An Inner class can also be ``static``, which means that we can access it without creating an object of the outer class:
+```java
+class OuterClass {
+    int x = 10;
+    
+    static class InnerClass {
+        int y = 5;
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass.InnerClass myInner = new OuterClass.InnerClass();
+    System.out.println(myInner.y);
+  }
+}
+```
+
+**Note:** Just like ``static`` attributes and methods, a ``static`` inner class does not have access to members of the outer class.
+
+### Access Outer Class From Inner Class
+One advantage of inner classes, is that they can access attributes and methods of the outer class:
+```java
+class OuterClass {
+    int x = 10;
+    
+    class InnerClass {
+        public int myInnerMethod() {
+            return x;
+        }
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.myInnerMethod());
+  }
+}
+```
+
+### Java Inner Class Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_inner_class/q1.png)
+![q1_correct.png](w3schools/week_5/java_inner_class/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_inner_class/q2.png)
+![q2_correct.png](w3schools/week_5/java_inner_class/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_inner_class/q3.png)
+![q3_correct.png](w3schools/week_5/java_inner_class/q3_correct.png)
+#### Question 4
+![q4.png](w3schools/week_5/java_inner_class/q4.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_inner_class/exercise_completed.png)
+
+### Java Abstraction
+**Abstract Classes and Methods**
+- Data Abstraction is the process of hiding certain details and showing only essential information to the user.
+- Abstraction can be achieved with either **abstract classes** or **interfaces** 
+- The ``abstract`` keyword is a non-access modifier, used for classes and methods:
+  - **Abstract class:** is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+  - **Abstract method:** can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
+
+An abstract class can have both abstract and regular methods:
+```java
+abstract class Animal {
+    public abstract void animalSound();
+    public void sleep() {
+      System.out.println("Zzz");
+    }
+}
+```
+- We cannot make an object of this Animal Class
+- So, to access the abstract class, it must be inherited from another class. Let's convert the Animal class we used in the Polymorphism chapter to an abstract class:
+
+```java
+// Abstract class
+abstract class Animal {
+    // Abstract method (does not have a body)
+    public abstract void animalSound();
+    // Regular method
+    public void sleep() {
+      System.out.println("Zzz");
+    }
+}
+
+// Subclass (inherit from Animal)
+class Pig extends Animal {
+    public void animalSound() {
+        // The body of animalSound() is provided here
+      System.out.println("The pig says: wee wee");
+    }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig Object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+```
+
+**Why and When To use Abstract Classes and Methods?**
+- to achieve security - hide certain details and only show the important details of an object.
+
+**Note:** Abstraction can also be achieved with Interfaces, thought it default makes all methods abstract and we do not have to specify ``abstract`` method.
+
+### Java Abstraction Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_abstraction/q1.png)
+![q1_correct.png](w3schools/week_5/java_abstraction/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_abstraction/q2.png)
+![q2_correct.png](w3schools/week_5/java_abstraction/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_abstraction/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_abstraction/exercise_completed.png)
+
+### Java Interface
+- Another way to achieve abstraction in java, is with interfaces.
+- An ``interface`` is completely "**abstract class**" that is used to group related methods with empty bodies:
+
+```java
+// interface
+interface Animal {
+    public void animalSound(); // interface method (does not have a body)
+    public void run(); // interface method (does not have a body)
+}
+```
+- Now to access the interface methods, the interface must be "implemented" (kinda like inherited) by another class with the ``implements`` keyword (instead of ``extends``). The body of the interface method is provided by the "implement" class:
+
+```java
+// interface
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+
+  public void sleep(); // interface method (does not have a body)
+}
+
+// Pig "implements" the Animal interface
+class Pig implements Animal {
+    public void animalSound() {
+        // the body of animalSound() is provided here
+      System.out.println("The pig says: wee wee");
+    }
+    public void sleep() {
+        // the body of sleep() is provided here
+      System.out.println("Zzz");
+    }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig Object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+```
+
+**Notes on Interfaces:**
+- Like abstract classes, interfaces cannot be used to create objects.
+- Interface methods do not have a body - the body is provided by the "implement" class
+- On implementation of an interface, we must override all of it's methods
+- Interface methods are by default ``abstract`` and ``public``
+- Interface attributes are by default ``public``, ``static``, and ``final``
+- An interface cannot contain a constructor (as it cannot be used to create objects)
+
+
+**Why and When to use Interfaces?**
+- To achieve security - hide certain details and only show the important details of an object (interface).
+- Java does not support "multiple inheritance" (a class can only inherit from one superclass).\
+- However, it can be achieved with interfaces, because the class can ``implement`` multiple interfaces.
+- **Note:** To Implement multiple interfaces, separate then with a comma.
+
+### Multiple Interfaces
+To implement multiple interfaces, separate them with a comma:
+```java
+interface FirstInterface {
+    public void myMethod(); // interface method
+}
+
+interface SecondInterface {
+    public void myOtherMethod(); // interface method
+}
+
+class DemoClass implements FirstInterface, SecondInterface {
+    public void myMethod() {
+      System.out.println("Some text..");
+    }
+    public void myOtherMethod() {
+      System.out.println("Some other text...");
+    }
+}
+
+class Main {
+  public static void main(String[] args) {
+    DemoClass myObj = new DemoClass();
+    myObj.myMethod();
+    myObj.myOtherMethod();
+  }
+}
+```
+
+### Java Interface Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_interface/q1.png)
+![q1_correct.png](w3schools/week_5/java_interface/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_interface/q2.png)
+![q2_correct.png](w3schools/week_5/java_interface/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_interface/q3.png)
+![q3_correct.png](w3schools/week_5/java_interface/q3_correct.png)
+#### Question 4
+![q4.png](w3schools/week_5/java_interface/q4.png)
+![q4_correct.png](w3schools/week_5/java_interface/q4_correct.png)
+#### Question 5
+![q5.png](w3schools/week_5/java_interface/q5.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_interface/exercise_completed.png)
