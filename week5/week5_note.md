@@ -1152,3 +1152,285 @@ class Main {
 ![q5.png](w3schools/week_5/java_interface/q5.png)
 #### Exercise Completed
 ![exercise_completed.png](w3schools/week_5/java_interface/exercise_completed.png)
+
+### Java Enums
+- An ``enum`` is a special "class" that represents a group of **constants** (unchangeable variables, like ``final`` variables).
+- To create an ``enum``, use the ``enum`` keyword (instead of class or interface), and separate the constants with a comma. Note that they should be in uppercase letters:
+
+```java
+enum Level {
+    LOW, MEDIUM, HIGH
+}
+```
+- We can access ``enum`` constants with the **dot** syntax:
+
+```java
+Level myVar = Level.MEDIUM;
+```
+- **Enum** is short for "enumerations", which means "specifically listed".
+
+### Enum inside a Class
+You can also have an ``enum`` inside a class:
+```java
+public class Main {
+    enum Level {
+        LOW, MEDIUM, HIGH
+    }
+
+  public static void main(String[] args) {
+    Level myVar = Level.MEDIUM;
+    System.out.println(myVar);
+  }
+}
+```
+- The output will be:
+```commandline
+MEDIUM
+```
+
+### Enum in a Switch Statement
+Enum are often used in ``switch`` statements to check for corresponding values:
+```java
+enum Level {
+    LOW, MEDIUM, HIGH
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Level myVar = Level.MEDIUM;
+  }
+  
+  switch(myVar) {
+    case LOW :
+      System.out.println("Low level");
+      break;
+      
+    case MEDIUM :
+      System.out.println("Medium Level");
+      break;
+      
+    case HIGH :
+      System.out.println("High level");
+      break;
+  }
+}
+// Output: Medium Level
+```
+
+### Loop through an Enum
+- The enum type has a ``values()`` method, which returns an array of all enum constants.
+- This method is useful when we want to loop through the constants of an enum:
+
+```java
+for (Level myVar : Level.values()) {
+    System.out.println(myVar);
+}
+
+/* Output:  LOW
+            MEDIUM
+            HIGH
+            
+ */
+```
+
+**Difference between Enums and Classes**
+- An ``enum`` can, just like a ``class``, have attributes and methods. 
+- The only difference is that enum constants are ``public``, ``static``, and ``final`` (unchangeable - cannot be overridden).
+- An ``enum`` cannot be used to create objects, and it cannot extend other classes (but it can implement interfaces).
+
+
+**Why and When To Use Enums?**
+- Use enums when we have values that we know aren't going to change, like month days, days, colors, deck of cards, etc.
+
+### Java Enums
+#### Question 1
+![q1.png](w3schools/week_5/java_enums/q1.png)
+![q1_correct.png](w3schools/week_5/java_enums/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_enums/q2.png)
+![q2_correct.png](w3schools/week_5/java_enums/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_enums/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_enums/exercise_completed.png)
+
+### Java User Input (Scanner)
+- The ``Scanner`` class is used to get user input, and it is found in the ``java.util`` package.
+- To use teh ``Scanner`` class, create an object of the class and use any of the available methods found in the ``Scanner`` class documentation.
+- Here, we will use the ``nextLine()`` method, which is used to read Strings:
+
+```java
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in); // Creating a Scanner object
+    System.out.println("Enter username");
+    
+    String userName = myObj.nextLine(); // Read user input
+    System.out.println("Username is: " + userName); // Output user input
+  }
+}
+```
+
+### Input Types
+- In the example above, we use the ``nextLine()`` method, which is used to read Strings. To read other types, look at the table below:
+
+**Method and their Descriptions**
+- ``nextBoolean()`` : Reads a ``boolean`` value from the user.
+- ``nextByte()`` : Reads a ``byte`` value from the user.
+- ``nextDouble()`` : Reads a ``double`` value from the user.
+- ``nextFloat()`` : Reads a ``float`` value from the user.
+- ``nextInt()`` : Reads a ``int`` value from the user.
+- ``nextLine()`` : Reads a ``String`` value from the user.
+- ``nextLong()`` : Reads a ``long`` value from the user.
+- ``nextShort()`` : Reads a ``short`` value from the user.
+
+In the example below, we use different methods to read data of various types:
+
+```java
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+
+    System.out.println("Enter name, age and salary:");
+    
+    // String input
+    String name = myObj.nextLine();
+    
+    // Numerical input
+    int age = myObj.nextInt();
+    double salary = myObj.nextDouble();
+    
+    // Output input by user
+    System.out.println("Name: " + name);
+    System.out.println("Age: " + age);
+    System.out.println("Salary: " + salary);
+  }
+}
+```
+
+**Note:** If we enter wrong input (e.g. text in a numerical input), we will get an exception/error message (like "InputMismatchException").
+
+### Java User Input Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_user_input/q1.png)
+![q1_correct.png](w3schools/week_5/java_user_input/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_user_input/q2.png)
+![q2_correct.png](w3schools/week_5/java_user_input/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_user_input/q3.png)
+![q3_correct.png](w3schools/week_5/java_user_input/q3_correct.png)
+#### Question 4
+![q4.png](w3schools/week_5/java_user_input/q4.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_user_input/exercise_completed.png)
+
+### Java Date and Time 
+**Java Dates**
+- Java does not have a built-in Date class, but we can import the ``java.time`` package to work with the date and time API.
+- The package includes many date and time classes. For example:
+
+**Class - Description**
+- ``LocalDate`` : Represents a date (year, month, dat (yyyy-MM-dd))
+- ``LocalTime`` : Represents a time (hour, minute, second, and nanoseconds (HH-mm-ss-ns))
+- ``LocalDateTime`` : Represents both a date and a time (yyyy-MM-dd-HH-mm-ss-ns)
+- ``DateTimeFormatter`` : Formatter for displaying and parsing date-time objects
+
+### Display Current Date
+To display the current date, import the ``java.time.LocalDate`` class, and useits ``now()`` method:
+
+```java
+import java.time.LocalDate; // Import the LocalDate class
+
+public class Main {
+  public static void main(String[] args) {
+    LocalDate myObj = LocalDate.now(); // create a date object
+    System.out.println(myObj);
+  }
+}
+
+// Output will be: 2025-04-05
+```
+
+### Display current Time
+To display the current time (hour, minute, second and nanoseconds), import the ``java.time.LocalTime`` class, and use its ``now()`` method:
+
+```java
+import java.time.LocalTime; // Import the LocalTime class
+
+public class Main {
+  public static void main(String[] args) {
+    LocalTime myObj = LocalTime.now();
+    System.out.println(myObj);
+  }
+}
+
+// Output: 16:36:14.652334
+```
+
+### Display Current Date and Time
+To display the current date and time, import the ``java.time.LocalDateTime`` class, and use its ``now()`` method:
+
+```java
+import java.time.LocalDateTime;
+import java.util.LocalDateTime; // import the LocalDateTime class
+import java.util.Locale;
+
+public class Main {
+  public static void main(String[] args) {
+    LocalDateTime myObj = LocalDateTime.now();
+    System.out.println(myObj);
+  }
+}
+
+// Output: 2025-04-05T17:03:14.564561
+```
+
+### Formatting Date and Time
+- The "T" in the example above is used to separate the date from the time.
+- We can use the ``DateTimeFormatter`` class with the ``ofPattern()`` method in the same package to format or parse date-time objects.
+- The following example will remove both the "T" and nanoseconds from the date-time.
+
+```java
+import java.time.LocalDateTime; // Import the LocalDateTime class
+import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
+
+public class Main {
+  public static void main(String[] args) {
+    LocalDateTime myDateObj = LocalDateTime.now();
+    System.out.println("Before formatting: " + myDateObj);
+    
+    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+    
+    String formattedDate = myDateObj.format(myFormatObj);
+    System.out.println("After Formatting: " + formattedDate);
+  }
+}
+
+/*
+        Before formatting: 2025-04-05T14:26:14.562123
+        After Formatting: 05-04-2025 14:26:14
+ */
+```
+- The ``ofPattern()`` method accepts all sorts of values, if we want to display the date and time in a different Format.
+- For Instance,
+  - ``yyyy-MM-dd`` : "1988-09-29"
+  - ``dd/MM/yyyy`` : "29/09/1988"
+  - ``dd-MMM-yyyy`` : "29-Sep-1988"
+  - ``E, MMM dd yyyy`` : "Thu, Sep 29 1988"
+
+### Java Date and Time Exercise
+#### Question 1
+![q1.png](w3schools/week_5/java_date_and_time/q1.png)
+![q1_correct.png](w3schools/week_5/java_date_and_time/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_5/java_date_and_time/q2.png)
+![q2_correct.png](w3schools/week_5/java_date_and_time/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_5/java_date_and_time/q3.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_5/java_date_and_time/exercise_completed.png)
