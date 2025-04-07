@@ -394,3 +394,245 @@ public class Main {
 ![exercise_completed.png](w3schools/week_6/java_sort_a_list/exercise_completed.png)
 
 ### Java HashMap
+- In the ``ArrayList`` chapter, we learned that Arrays store items as an ordered collection.
+- If we have to access them, we use an index number (``int`` type).
+- But, A ``HashMap`` store items in "key/value" pairs, and we can access them by an index of another type (e.g. a ``String``).
+
+One Object is used as a key (index) to another object (value). 
+- It can store different types: ``String`` keys and ``Integer`` values
+- or, the same type, like: ``String`` keys and ``String`` values.
+
+```java
+// Here, we will create a HashMap object called capitalCities and will store "String" keys and "String" values:
+import java.util.HashMap; 
+
+HashMap<String, String> capitalCities = new HashMap<String, String>();
+```
+
+### Add items in HashMap
+The ``HashMap`` class has many useful methods. For example, to add items to it, we use: ``put()`` method:
+```java
+import java.util.HashMap;
+
+public class Main {
+  public static void main(String[] args) {
+    // creating a HashMap object called capitalCities
+    HashMap<String, String> capitalCities = new HashMap<String, String>();
+    
+    // Add keys and values (Country, City)
+    capitalCities.put("Nepal", "Kathmandu");
+    capitalCities.put("India", "New Delhi");
+    capitalCities.put("Bhutan", "Thimpu");
+    capitalCities.put("Bangladesh", "Dhaka");
+    capitalCities.put("Pakistan", "Islamabad");
+    capitalCities.put("Sri Lanka", "Colombo");
+
+    System.out.println(capitalCities);
+  }
+}
+```
+
+### Access an Item in HashMap
+To access a value in the ``HashMap``, use the ``get()`` method and refer to its key:
+```java
+capitalCities.get("Nepal");
+```
+
+### Remove an Item in HashMap
+To remove an item, use the ``remove()`` and refer to the key:
+```java
+capitalCities.remove("Pakistan");
+```
+- and, to remove all items, we use the ``clear()`` method:
+```java
+capitalCities.clear();
+```
+
+### HashMap Size
+To find out how many items there are, we use the ``size()`` method:
+```java
+capitalCities.size();
+```
+
+### Loop Through a HashMap
+- We can loop through the items of a ``HashMap`` with **for-each** loop.
+- **Note:** Use the ``keySet()`` method, if we only want the keys, and use the ``values()`` method if we only want the values:
+```java
+// To print the keys
+for (String i : capitalCities.keySet()) {
+    System.out.println(i);
+}
+
+// and to print the values
+for (String i : capitalCities.values()) {
+    System.out.println(i);
+}
+```
+- And, if we want to print both keys and values
+```java
+// Print keys and values
+for (String i : capitalCities.keySet()) {
+    System.out.println("key: " + i + " values: " + capitalCities.get(i));
+}
+```
+
+### Other Types
+- Keys and values in a HashMap are actually Objects.
+- In the examples above, we used objects of type "String".
+- And, Remember that a "String" in a Java is an Object (not a primitive type).
+- To use other types, such as ``int``, we must specify a equivalent wrapper class such as ``Integer``.
+- For other primitive types:
+  - ``Boolean`` for boolean
+  - ``Character`` for char
+  - ``Double`` for double, etc.
+
+```java
+// Creating a HashMap object called people that will store String keys and Integer values:
+import java.util.HashMap;
+
+public class Main {
+  public static void main(String[] args) {
+    // creating a HashMap object called People
+    HashMap<String, Integer> people = new HashMap<String, Integer>();
+    
+    // Adding keys and values (Name, Age)
+    people.put("Rishav", 22);
+    people.put("Eliana", 22);
+    people.put("Angelina", 24);
+    
+    for (String i : people.keySet()) {
+      System.out.println("key: " + i + " value: " + people.get(i));
+    }
+  }
+}
+```
+
+### Java HashMap Exercises
+#### Question 1
+![q1.png](w3schools/week_6/java_hashmap/q1.png)
+![q1_correct.png](w3schools/week_6/java_hashmap/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_6/java_hashmap/q2.png)
+![q2_correct.png](w3schools/week_6/java_hashmap/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_6/java_hashmap/q3.png)
+![q3_correct.png](w3schools/week_6/java_hashmap/q3_correct.png)
+#### Question 4
+![q4.png](w3schools/week_6/java_hashmap/q4.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_6/java_hashmap/exercise_completed.png)
+
+### Java HashSet
+- A HashSet is a collection of items where every item is unique,
+- And, it is found in the ``java.util`` package
+```java
+// Create a HashSet object called cars that will store strings
+import java.util.HashSet; 
+
+HashSet<String> cars = new HashSet<String>();
+```
+
+### Add Items for HashSet
+- The ``HashSet`` class has many useful methods.
+- For example, to add items to it, we use the ``add()`` method.
+
+```java
+import java.util.HashSet;
+
+public class Main {
+  public static void main(String[] args) {
+    HashSet<String> cars = new HashSet<String>();
+    
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("BMW");
+    cars.add("Mazda");
+
+    System.out.println(cars);
+  }
+}
+```
+
+**Note:**
+- In the example above, even though BMW is added twice, it only appears once in the set.
+- Because, every item in a set has to be unique.
+
+### Check if an Item exists for HashSet
+To check whether an item exists in a HashSet, we use the ``contains()`` method:
+```java
+cars.contains("Mazda");
+```
+
+### Remove an Item for HashSet
+To remove an item, we use the ``remove()`` method:
+```java
+cars.remove("Volvo");
+```
+- And, to remove all items, we use the ``clear()`` method:
+```java
+cars.clear();
+```
+
+### HashSet Size
+To find out how many items there are, we use the ``size()`` method:
+```java
+cars.size();
+```
+
+### Loop Through a HashSet
+Loop through the items of an ``HashSet`` with a **for-each** loop:
+```java
+for (String i : cars) {
+    System.out.println(i);    
+}
+```
+
+### Other Types in HashSet
+- Like in others like ``HashMap``, ``LinkedList`` and ``ArrayList``
+- Elements are stored as Objects which is not a primitive type.
+- ``String`` is a primitive type, ``int`` is not.
+- ``Integer``, ``Boolean``, ``Character`` and ``Double`` is used instead of ``int``, ``boolean``, ``char``, and ``double``.
+
+```java
+// use a HashSet that stores Integer objects
+import java.util.HashSet;
+
+public class Main {
+  public static void main(String[] args) {
+    // Create a HashSet object called numbers
+    HashSet<Integer> numbers = new HashSet<Integer>();
+    
+    // Add the values to the set
+    numbers.add(5);
+    numbers.add(14);
+    numbers.add(23);
+    numbers.add(3);
+    numbers.add(4);
+    
+    // Show which numbers between 1 and 10 in the set
+    for (int i = 1; i <= 10; 1++) {
+        if (numbers.contains(i)) {
+          System.out.println(i + " was found in teh set.");
+        } else {
+          System.out.println(i + " was not found in the set.");
+        }
+    }
+  }
+}
+```
+
+### Java HashSet Exercise
+#### Question 1
+![q1.png](w3schools/week_6/java_hashset/q1.png)
+![q1_correct.png](w3schools/week_6/java_hashset/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_6/java_hashset/q2.png)
+![q2_correct.png](w3schools/week_6/java_hashset/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_6/java_hashset/q3.png)
+![q3_correct.png](w3schools/week_6/java_hashset/q3_correct.png)
+#### Question 4
+![q4.png](w3schools/week_6/java_hashset/q4.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_6/java_hashset/exercise_completed.png)
