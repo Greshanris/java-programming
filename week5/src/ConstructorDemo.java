@@ -1,13 +1,13 @@
 //
 
 class Pen {
-    // object ko properties lai define garne kaam lai constructor vaninxa
+    // Constructor defines the Object's properties
     // Creating an instance of an object: Constructor
     String color;
     String type;
 
     /*
-    1. Constructor ko name ra class name will be same
+    1. Constructor name and class name should be same
     2. Even if we do not define constructor, the code will still run because java internally makes an constructor
     3. We can use parameter in constructor (custom defined)
     4. There is another type of constructor called copy constructor.

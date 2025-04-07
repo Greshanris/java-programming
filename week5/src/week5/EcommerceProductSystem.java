@@ -21,7 +21,7 @@ class EcommerceProductSystem {
     public void updateStock( int quantity) {
         if (quantity <= stockQuantity) {
             stockQuantity -= quantity;
-            System.out.println("stockQuantity got reduced by: " + quantity + " so, stockQuantity: " + stockQuantity);
+            System.out.println("stockQuantity got reduced by: " + quantity + " \n so, stockQuantity: " + stockQuantity);
         }
     }
 }

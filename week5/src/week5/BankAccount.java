@@ -1,6 +1,7 @@
 package week5;
 /*
-
+Encapsulation:
+- getter, setter function
  */
 public class BankAccount {
     // Defining properties using private due to encapsulation usage

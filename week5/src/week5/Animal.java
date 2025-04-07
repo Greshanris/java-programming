@@ -11,7 +11,19 @@ public class Animal {
         this.color = color;
     }
 
-    // Default Access modifier: Whether we put public or private or protected, and while writing public or private or protected on properties or functions, from where do we have access to it?
+    /*
+     Default Access modifier:
+        we put "public" or "private" or "protected",
+        to define from where do we have access to it(methods, class, or attributes)?
+
+     public class: accessible by all class
+     default class: only accessible in the same package
+
+     public (attributes, methods and constructors): accessible for all classes
+     private (attributes, methods and constructors): only accessible within the declared class
+     default (attributes, methods, and constructors): only accessible in the same package.
+     protected (attributes, methods and constructors): accessible in the same package and subclasses(inheritance).
+     */
     private void printName() {
         System.out.println("Name: " + this.name);
     }
