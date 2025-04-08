@@ -636,3 +636,216 @@ public class Main {
 ![q4.png](w3schools/week_6/java_hashset/q4.png)
 #### Exercise Completed
 ![exercise_completed.png](w3schools/week_6/java_hashset/exercise_completed.png)
+
+### Java Iterator
+- An ``Iterator`` is an object that can be used to loop through collections. 
+- It is like ``ArrayList`` and ``HashSet``.
+- It is called "iterator" because "iterating" is the technical term for looping.
+
+So, to use an iterator, we must import it from the ``java.util`` package
+
+### Getting an Iterator
+- The ``iterator`` method can be used to get an ``Iterator`` for any collection:
+
+```java
+// Import the ArrayList class and the Iterator class
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main {
+    public static void main(String[] args) {
+        // Make a collections
+        ArrayList<String> cars = new ArrayList<String>();
+        
+        cars.add("BMW");
+        cars.add("Volvo");
+        cars.add("Ford");
+        cars.add("Mazda");
+        
+        // Get the iterator
+        Iterator<String> it = cars.iterator();
+        
+        // print the first item
+        System.out.println(it.next()); // Volvo
+        System.out.println(it.next()); // BMW
+        System.out.println(it.next()); // Ford
+    }
+}
+```
+
+### Looping through a Collection
+To loop through a collection, we use the ``hasNext()`` and ``next()`` methods of the ``Iterator``:
+```java
+while(it.hasNext()) {
+    System.out.println(it.next());
+}
+/*
+        Output:
+Volvo
+BMW
+Ford
+Mazda
+ */
+```
+
+### Removing Items from a Collection
+- Iterators are designed to easily change the collections that they loop through.
+- The ``remove()`` method can remove items from a collection while looping.
+
+```java
+// Use an iterator to remove numbers less than 10 from a collection:
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        
+        numbers.add(3);
+        numbers.add(5);
+        numbers.add(14);
+        numbers.add(23);
+        numbers.add(4);
+        
+        // creating iterator object for numbers collection
+        Iterator<Integer> it = numbers.iterator();
+        
+        // while it.hasNext(), if the value is true then:
+        // Store the value of it.next() in Integer i object,
+        // and if the i value which we get is less than 10, then remove it.
+        while (it.hasNext()) {
+            Integer i = it.next();
+            if ( i < 10) {
+                it.remove();
+            }
+        }
+        System.out.println(numbers); // [14, 23]
+    }
+}
+```
+
+**Note:**
+- If we try to remove items using a **for loop** or a **for-each loop**, it would not work in collections.
+- It is because collection is changing size at the same time that the code is trying to loop.
+
+### Java Iterator Exercises
+#### Question 1
+![q1.png](w3schools/week_6/java_iterator/q1.png)
+![q1_correct.png](w3schools/week_6/java_iterator/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_6/java_iterator/q2.png)
+![q2_correct.png](w3schools/week_6/java_iterator/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_6/java_iterator/q3.png)
+![q3_correct.png](w3schools/week_6/java_iterator/q3_correct.png)
+#### Question 4
+![q4.png](w3schools/week_6/java_iterator/q4.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_6/java_iterator/exercise_completed.png)
+
+### Java Wrapper Classes
+Wrapper classes provide a way to use primitive data types (``int``, ``boolean``, etc..) as objects.
+
+**Primitive Data Type - Wrapper Class**
+- ``byte`` : ``byte``
+- ``short`` : ``Short``
+- ``int`` : ``Integer``
+- ``long`` : ``Long``
+- ``float`` : ``Float``
+- ``double`` : ``Double``
+- ``boolean`` : ``Boolean``
+- ``char`` : ``Character``
+
+
+Sometimes, we must use wrapper classes:
+- For example, when working with Collection objects, such as ``ArrayList``
+- because, primitive types cannot be used (the list can only store objects):
+
+```java
+// Example
+
+import java.util.ArrayList;
+
+ArrayList<int> myNumbers = new ArrayList<int>(); // Invalid
+
+ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // valid
+```
+
+### Creating Wrapper Objects
+- To create a wrapper object, we use the wrapper class instead of primitive types
+- To get the value, we can just print the object:
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    Integer myInt = 5;
+    Double myDouble = 5.55;
+    Character myChar = 'A';
+    System.out.println(myInt);
+    System.out.println(myDouble);
+    System.out.println(myChar);
+  }
+}
+```
+- Since, we are now working with objects, we can use certain methods to get information about the specific object.
+  - For example, the following methods are used to get the value associated with the corresponding wrapper object:
+    - ``intValue()``
+    - ``byteValue()``
+    - ``shortValue()``
+    - ``longValue()``
+    - ``floatValue()``
+    - ``doubleValue()``
+    - ``charValue()``
+    - ``booleanValue()``
+
+```java
+// This example will output the same result as the example above:
+public class Main {
+  public static void main(String[] args) {
+    Integer myInt = 5;
+    Double myDouble = 5.55;
+    Character myChar = 'E';
+    System.out.println(myInt.intValue());
+    System.out.println(myDouble.doubleValue());
+    System.out.println(myChar.charValue());
+  }
+}
+
+/*
+        Output:
+5
+5.55
+E
+ */
+```
+
+- There is another useful method which is ``toString()`` method.
+- ``toString()`` method is used to convert **wrapper objects to Strings.**
+- Here, in the example, we will convert an ``Integer`` to a ``String``, and use the ``length()`` method of the ``String`` class to output the length of the "String":
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    Integer myInt = 100;
+    String myString = myInt.toString();
+    System.out.println(myString.length());
+  }
+}
+// Output: 3
+```
+
+### Java Wrapper Exercise
+#### Question 1
+![q1.png](w3schools/week_6/java_wrapper/q1.png)
+![q1_correct.png](w3schools/week_6/java_wrapper/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_6/java_wrapper/q2.png)
+![q2_correct.png](w3schools/week_6/java_wrapper/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_6/java_wrapper/q3.png)
+![q3_correct.png](w3schools/week_6/java_wrapper/q3_correct.png)
+#### Question 4
+![q4.png](w3schools/week_6/java_wrapper/q4.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_6/java_wrapper/exercise_completed.png)
