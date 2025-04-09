@@ -1,4 +1,4 @@
-//
+package week5;//
 
 class Pen {
     // Constructor defines the Object's properties

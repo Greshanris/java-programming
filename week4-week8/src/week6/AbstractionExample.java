@@ -1,4 +1,4 @@
-package week5;
+package week6;
 
 // to create an abstract class, we need to use abstract keyword
 abstract class MahindraCar {

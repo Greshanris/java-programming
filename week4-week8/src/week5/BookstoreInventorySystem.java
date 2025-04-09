@@ -1,4 +1,4 @@
-/*
+package week5;/*
 4. Book Inventory System
     - Create a Book class with title, author, price, and ISBN.
     - Instantiate two books and display their details.

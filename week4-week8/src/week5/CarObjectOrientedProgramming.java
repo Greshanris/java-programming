@@ -1,3 +1,5 @@
+package week5;
+
 // Defining the class car
 class Car {
     // Defining the attributes

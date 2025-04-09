@@ -1,3 +1,4 @@
+package week5;
 
 // class is a blueprint of an object
 class Dog {

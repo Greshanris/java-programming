@@ -1,4 +1,4 @@
-package week5;
+package week6;
 
 class Addition {
     public void add (int a, int b) {

@@ -1,4 +1,4 @@
-package week5;
+package week6;
 /*
 Abstraction:
 RENTAL CALCULATION
