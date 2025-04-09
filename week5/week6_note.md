@@ -849,3 +849,139 @@ public class Main {
 ![q4.png](w3schools/week_6/java_wrapper/q4.png)
 #### Exercise Completed
 ![exercise_completed.png](w3schools/week_6/java_wrapper/exercise_completed.png)
+
+## Java Advanced
+### Java Exceptions
+- When executing Java code, different errors can occur:
+  - coding errors made by the programmer
+  - errors due to wrong input
+  - or, other unforeseeable things
+- When an error occurs, Java will normally stop and generate an error message.
+- The technical term for this is: Java will throw an **exception** (throw an error).
+
+### Java try and catch
+- The ``try`` statement allows us to define a block of code to be tested for errors while it is being executed.
+- The ``catch`` statement allows us to define a block of code to be executed, if an error occurs in the try block.
+- The ``try`` and ``catch`` keywords come in pairs:
+```java
+try {
+    // Block of code to try
+}
+catch (Exception e) {
+    // Block of code to handle errors
+}
+```
+- Let's consider the following example:
+```java
+// This will generate an error, because myNumbers[10] does not exist.
+public class Main {
+  public static void main(String[] args) {
+    int[] myNumbers = {1, 2, 4};
+    System.out.println(myNumbers[10]); // errors because there is no value that exists in 10th index
+  }
+}
+```
+- Output to the above code will be like:
+```commandline
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
+        at Main.main(Main.java:4)
+```
+- **Note:** ``ArrayIndexOutOfBoundsException`` occurs when we try to access an index number that does not exist.
+- So, if an error occurs, we can use ``try...catch`` to catch the error and execute some code to handle it:
+```java
+public class Main {
+  public static void main(String[] args) {
+    try {
+        int[] myNumbers = {1, 2, 3};
+      System.out.println(myNumbers[10]);
+    } catch (Exception e) {
+      System.out.println("Something went wrong.");
+    }
+  }
+}
+```
+### Finally
+- The ``finally`` statment lets us execute code, after ``try...catch``, regardless of the result:
+```java
+public class Main{
+  public static void main(String[] args) {
+    try {
+        int[] myNumbers = {3, 5, 14, 21};
+      System.out.println(myNumbers[10]);
+    } catch (Exception e) {
+      System.out.println("Something went wrong.");
+    } finally {
+      System.out.println("The \"try catch\" is finished");
+    }
+  }
+}
+/*
+Output:
+
+Something went wrong.
+The "try catch" is finished 
+ */
+```
+
+### The throw keyword
+- The ``throw`` statement allows us to create a custom error.
+- The ``throw`` statement is used together with an **exception type**. 
+- There are many exception types available in Java:
+  - ``ArithmeticException``
+  - ``FileNotFoundException``
+  - ``ArrayIndexOutOfBoundsException``
+  - ``SecurityException``, etc.
+
+```java
+// Throw an exception if age is below 18 (print "Access denied"). If age is 18 or older, print "Access Granted":
+public class Main {
+    static void checkAge (int age) {
+        if (age < 18) {
+            throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+        }
+        else {
+          System.out.println("Access granted - You are old enough!");
+        }
+    }
+
+  public static void main(String[] args) {
+    checkAge(14); // setting age to 14 (which is below 18...)
+  }
+}
+/*
+Output:
+
+Exception in thread "main" java.lang.ArithmeticException: Access denied - You must be at least 18 years old.
+	at Main.checkAge(Main.java:5)
+	at Main.main(Main.java:13)        
+ */
+```
+- If **age** was 20, we would **not** get an exception
+```java
+checkAge(23);
+
+/*
+Output:
+
+Access granted - You are old enough!        
+ */
+```
+
+### Java Exceptions Exercise
+#### Question 1
+![q1.png](w3schools/week_6/java_advanced_maybe_week7/java_exceptions/q1.png)
+![q1_correct.png](w3schools/week_6/java_advanced_maybe_week7/java_exceptions/q1_correct.png)
+#### Question 2
+![q2.png](w3schools/week_6/java_advanced_maybe_week7/java_exceptions/q2.png)
+![q2_correct.png](w3schools/week_6/java_advanced_maybe_week7/java_exceptions/q2_correct.png)
+#### Question 3
+![q3.png](w3schools/week_6/java_advanced_maybe_week7/java_exceptions/q3.png)
+![q3_correct.png](w3schools/week_6/java_advanced_maybe_week7/java_exceptions/q3_correct.png)
+#### Question 4
+![q4.png](w3schools/week_6/java_advanced_maybe_week7/java_exceptions/q4.png)
+#### Exercise Completed
+![exercise_completed.png](w3schools/week_6/java_advanced_maybe_week7/java_exceptions/exercise_completed.png)
+
+### Java Regular Expressions
+**So, What is Regular Expression?**
+- A regular expression
