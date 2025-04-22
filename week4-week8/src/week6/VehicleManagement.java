@@ -2,7 +2,13 @@ package week6;
 
 /*
 Question:
-    A company manufactures different types of vehicles such as Cars and Bikes. Every
+    A company manufactures different types of vehicles such as Cars and Bikes. Every Vehicle has brandName and maxSpeed.
+    Cars has extra number of doors while Bike has extra handle bar type.
+- create a class called Vehicle.
+- inherit attributes of Vehicle class in car class and bike class
+- Display the information
+- Use Method Overriding, if needed.
+- Create new instance of Both car and bike and use displayInfo() method to display the car and bike information.
  */
 
 // Defining Class Vehicle

@@ -982,6 +982,3 @@ Access granted - You are old enough!
 #### Exercise Completed
 ![exercise_completed.png](w3schools/week_6/java_advanced_maybe_week7/java_exceptions/exercise_completed.png)
 
-### Java Regular Expressions
-**So, What is Regular Expression?**
-- A regular expression

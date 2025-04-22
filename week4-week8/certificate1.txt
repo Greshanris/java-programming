@@ -1,0 +1,10 @@
+
+----------------------- CERTIFICATE ------------------------
+
+This certificate is presented to certify Mrs/Mr. RISHAV for graduating in the following subjects:
+
+Math - Practical: 23, Theory: 3
+Programming - Practical: 43, Theory: 34
+Science - Practical: 23, Theory: 32
+
+Total Marks: 158

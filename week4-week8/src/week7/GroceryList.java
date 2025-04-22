@@ -1,6 +1,8 @@
 package week7;
 
 /*
+Question:
+
 You are developing a grocery shopping app where users can add items to their shopping list.
 Implement a java program that allows the user to :
     - Add items to the list.

@@ -2,8 +2,6 @@ package week7;
 
 // Week 6: Day1: Monday: 7th April, 2025
 // Linked List: Question 1
-
-
 import java.util.ArrayList;
 
 // Defining a Contact class
