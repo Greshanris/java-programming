@@ -7,7 +7,6 @@ import java.io.IOException;
 public class JavaFileExample {
     public static void main(String[] args) {
         try {
-
             File newFile = new File("R:\\rishav_folder\\Present_assignment\\PRG401JAVA\\week4-week8\\src\\week8\\newFile.txt");
             if (newFile.createNewFile()) {
                 System.out.println("Created file name: " + newFile.getName());
